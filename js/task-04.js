@@ -5,7 +5,7 @@ const incrementButton = document.querySelector('[data-action="increment"]');
 const value = document.getElementById('value');
 
 
-const handleClickButton = ({target}) => {
+const handleBtnClick = ({target}) => {
     const getAttribute = target.getAttribute('data-action')
     
     if(getAttribute === "increment") {
@@ -17,6 +17,6 @@ const handleClickButton = ({target}) => {
     value.textContent = counterValue;
 }
 
-decrementButton.addEventListener('click' , handleClickButton)
-incrementButton.addEventListener('click', handleClickButton)
+decrementButton.addEventListener('click' , handleBtnClick)
+incrementButton.addEventListener('click', handleBtnClick)
 

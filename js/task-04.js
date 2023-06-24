@@ -5,7 +5,7 @@ const incrementButton = document.querySelector('[data-action="increment"]');
 const value = document.getElementById('value');
 
 
-const handleBtnClick = ({target}) => {
+const handleBtnClick = ({target}={}) => {
     const getAttribute = target.getAttribute('data-action')
     
     if(getAttribute === "increment") {

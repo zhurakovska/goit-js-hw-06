@@ -1,7 +1,7 @@
 const userNameEl = document.getElementById('name-output')
 const inputNameEl = document.getElementById('name-input')
 
-const onInputChangeName = ({target}) => {
+const onInputChangeName = ({target}={}) => {
     if(target.value === '') {
         userNameEl.innerHTML = 'Anonymous'
         return

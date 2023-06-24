@@ -12,3 +12,23 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+
+const galleryCard = ({url, alt} ={}) => {
+  const galleryItemEl = `
+  <li class="gallery-item">
+     <img class="gallery-item-img" src="${url}" alt="${alt}" width="100px">
+  </li>
+  `;
+  
+  return galleryItemEl;
+}
+
+
+
+const galleryArr = images.map(el => galleryCard(el))
+const galleryList = document.querySelector(".gallery")
+
+console.log(galleryCard)
+
+galleryList.insertAdjacentHTML('afterbegin', galleryArr.join(''));

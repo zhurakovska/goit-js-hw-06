@@ -12,9 +12,7 @@ const destroyBtnEl = document.querySelector('[data-destroy]');
 const createBoxes = () => {
   const initialInputValue = +amountInputEl.value;
 
-  while (boxesEl.firstChild) {
-    boxesEl.removeChild(boxesEl.firstChild);
-  }
+  onRemoveBtnClick()
 
   let width = 30;
   let height = 30;
@@ -32,12 +30,13 @@ const createBoxes = () => {
   }
 };
 
-createBtnEl.addEventListener('click', createBoxes);
-destroyBtnEl.addEventListener('click', () => {
+const onRemoveBtnClick = () => {
   while (boxesEl.firstChild) {
-    boxesEl.removeChild(boxesEl.firstChild);
-  }
-});
+  boxesEl.removeChild(boxesEl.firstChild);}
+}
+
+createBtnEl.addEventListener('click', createBoxes);
+destroyBtnEl.addEventListener('click',onRemoveBtnClick);
 
 
 

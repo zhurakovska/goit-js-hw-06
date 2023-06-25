@@ -45,4 +45,3 @@ destroyBtnEl.addEventListener('click',onRemoveBtnClick);
 
 
 
-

@@ -3,13 +3,17 @@ const initialValues = {email: '', password:''}
 
 const onFormSubmit = (event) => {
     event.preventDefault();
+
+    const email = event.target.elements["email"];
+    const password = event.target.elements["password"];
+
     
-    if(event.target.elements["email"].value ==='' || event.target.elements["password"].value ==='') {
+    if(email.value ==='' || password.value ==='') {
        console.log(alert("Всі поля повинні бути заповнені!"))
         return
     }
-    initialValues.email = event.target.elements["email"].value
-    initialValues.password = event.target.elements["password"].value
+    initialValues.email = email.value
+    initialValues.password = password.value
 
     console.log(initialValues)
 

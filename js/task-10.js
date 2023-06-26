@@ -37,11 +37,3 @@ const onRemoveBtnClick = () => {
 
 createBtnEl.addEventListener('click', createBoxes);
 destroyBtnEl.addEventListener('click',onRemoveBtnClick);
-
-
-
-
-
-
-
-

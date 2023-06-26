@@ -4,16 +4,15 @@ const initialValues = {email: '', password:''}
 const onFormSubmit = (event) => {
     event.preventDefault();
 
-    const email = event.target.elements["email"];
-    const password = event.target.elements["password"];
-
+    const email = event.target.elements.email.value;
+    const password = event.target.elements.password.value;
     
-    if(email.value ==='' || password.value ==='') {
+    if(email ==='' || password ==='') {
        console.log(alert("Всі поля повинні бути заповнені!"))
         return
     }
-    initialValues.email = email.value
-    initialValues.password = password.value
+    initialValues.email = email
+    initialValues.password = password
 
     console.log(initialValues)
 

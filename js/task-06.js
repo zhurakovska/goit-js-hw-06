@@ -1,16 +1,18 @@
 const inputEl = document.getElementById('validation-input')
 
-const onInputCheckBlur = ({target}={}) => {
-    const expectedLenght = parseInt(target.dataset.length)
-    const inputLength = target.value.length;
+const onInputCheckBlur = ({target}) => {
+
+  const {dataset, value, classList} = target;
+    const expectedLenght = parseInt(dataset.length)
+    const inputLength = value.length;
 
    
     if (expectedLenght === inputLength) {
-        target.classList.add('valid');
-        target.classList.remove('invalid');
+        classList.add('valid');
+        classList.remove('invalid');
       } else {
-        target.classList.remove('valid');
-        target.classList.add('invalid');
+        classList.remove('valid');
+        classList.add('invalid');
       }
 }
 

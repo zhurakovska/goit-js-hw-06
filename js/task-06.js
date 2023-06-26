@@ -1,8 +1,8 @@
 const inputEl = document.getElementById('validation-input')
 
-const onInputCheckBlur = ({target}) => {
+const onInputCheckBlur = (event) => {
 
-  const {dataset, value, classList} = target;
+  const {dataset, value, classList} = event.target;
     const expectedLenght = parseInt(dataset.length)
     const inputLength = value.length;
 
